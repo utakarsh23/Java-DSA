@@ -5,9 +5,9 @@ import static java.lang.Float.POSITIVE_INFINITY;
 
 class powXY {
     public static void main(String[] args) {
-//        System.out.println(myPow1(2, -20000));
-        double x = Double.POSITIVE_INFINITY;
-        System.out.println(Float.isNaN((float) (0.0/0.0)));
+        System.out.println(myPow1(2, -20000));
+//        double x = Double.POSITIVE_INFINITY;
+//        System.out.println(x);
     }
 
     //m1
