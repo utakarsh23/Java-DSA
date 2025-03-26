@@ -1,10 +1,13 @@
 package LeetCode;
 
+import java.util.function.Function;
+
 class findMinimumInRotatedSortedArrayII {
     public static void main(String[] args) {
         int[] nums = {3,3,1,3};
         System.out.println(findMin(nums));
     }
+
     static int findMin(int[] nums) {
         int start = 0;
         int end = nums.length-1;
