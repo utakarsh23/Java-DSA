@@ -1,67 +1,59 @@
 package LeetCode.LinkedLists;
 
-/**
- * Definition for singly-linked list.
- */
-
 public class MergeKSortedLists {
     public ListNode mergeKLists(ListNode[] lists) {
-        ListNode dummy = new ListNode(0);
-        ListNode mainList = dummy;
-        ListNode dh = dummy;
-        for (int i = 0; i < lists.length; i++) {
-            ListNode list1 = lists[i];
-            ListNode dlists = list1;
-            ListNode dlist1 = dlists;
-            while (dlist1 != null && dh != null) {
-                if(dlist1.val < dh.val) {
-                    mainList.next = dlist1;
-                    dlist1 = dlist1.next;
-                    mainList = mainList.next;
-                } else { // dlist1.val > dh.val
-                    mainList.next = dh;
-                    dh = dh.next;
-                    mainList = mainList.next;
-                }
-            }
-            while (dlist1 != null) {
-                mainList.next = dlist1;
-                mainList = mainList.next;
-                dlist1 = dlist1.next;
-            }
+        if (lists == null || lists.length == 0) return null;
 
-            while (dh != null) {
-                mainList.next = dh;
-                mainList = mainList.next;
-                dh = dh.next;
-            }
+        ListNode dummy = new ListNode(0);
+        ListNode mergedList = dummy;
+
+        for (ListNode list : lists) {
+            mergedList = mergeTwoLists(mergedList.next, list);  // Merge current list into mergedList
         }
         return dummy.next;
     }
 
+    private ListNode mergeTwoLists(ListNode l1, ListNode l2) {
+        ListNode dummy = new ListNode(0);
+        ListNode tail = dummy;
+
+        while (l1 != null && l2 != null) {
+            if (l1.val < l2.val) {
+                tail.next = l1;
+                l1 = l1.next;
+            } else {
+                tail.next = l2;
+                l2 = l2.next;
+            }
+            tail = tail.next;
+        }
+
+        if (l1 != null) tail.next = l1;
+        if (l2 != null) tail.next = l2;
+
+        return dummy.next;
+    }
+
     // Helper function to print the linked list
-    private String printList(ListNode head) {
-        StringBuilder sb = new StringBuilder();
+    public static void printList(ListNode head) {
         while (head != null) {
-            sb.append(head.val).append(" -> ");
+            System.out.print(head.val + " -> ");
             head = head.next;
         }
-        sb.append("null");
-        return sb.toString();
+        System.out.println("null");
     }
 
     public static void main(String[] args) {
         MergeKSortedLists merger = new MergeKSortedLists();
 
-        // Creating test cases
         ListNode l1 = new ListNode(1, new ListNode(4, new ListNode(5)));
         ListNode l2 = new ListNode(1, new ListNode(3, new ListNode(4)));
         ListNode l3 = new ListNode(2, new ListNode(6));
 
         ListNode[] lists = {l1, l2, l3};
-
-        // Merging lists and printing result
         ListNode mergedHead = merger.mergeKLists(lists);
-        System.out.println("Final Merged List: " + merger.printList(mergedHead));
+
+        System.out.println("Merged Linked List:");
+        printList(mergedHead);
     }
 }
