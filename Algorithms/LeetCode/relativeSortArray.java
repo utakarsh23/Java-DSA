@@ -5,7 +5,7 @@ import java.util.Arrays;
 
 class relativeSortArray {
     public static void main(String[] args) {
-        System.out.println(Arrays.toString(relativeSortArray(new int[]{2,21,43,38,0,42,33,7,24,13,12,27,12,24,5,23,29,48,30,31}, new int[]{2,42,38,0,43,21})));
+        System.out.println(Arrays.toString(relativeSortArray1(new int[]{2,3,1,3,2,4,6,7,9,2,19}, new int[]{2,1,4,3,9,6})));
     }
     static int[] relativeSortArray(int[] arr1, int[] arr2) {
         ArrayList<Integer> list = new ArrayList<>();
@@ -34,7 +34,7 @@ class relativeSortArray {
     }
 
     //
-    public int[] relativeSortArray1(int[] arr1, int[] arr2) {
+    public static int[] relativeSortArray1(int[] arr1, int[] arr2) {
         int length = 0;
         for(int i=0;i<arr1.length;i++){
             length = Math.max(length,arr1[i]);

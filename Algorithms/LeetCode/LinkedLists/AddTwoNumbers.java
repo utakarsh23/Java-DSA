@@ -3,12 +3,12 @@ package LeetCode.LinkedLists;
 
 public class AddTwoNumbers {
     public static void main(String[] args) {
-        ListNode l1 = new ListNode(2, new ListNode(4, new ListNode(3)));
+        ListNode l1 = new ListNode(2, new ListNode(6, new ListNode(3)));
         ListNode l2 = new ListNode(5, new ListNode(6, new ListNode(4)));
 
 
         AddTwoNumbers obj = new AddTwoNumbers();
-        ListNode result = obj.addTwoNumbers(l1, l2);
+        ListNode result = obj.addTwoNumbers1(l1, l2);
 
         System.out.print("Sum: ");
         printList(result);
