@@ -6,7 +6,6 @@ public class pushZerosToEnd {
     }
     static void pushZerosToEnd(int[] arr) {
         int i = 0;
-        int[] ss = new int[arr.length];
         for (int j = 0; j < arr.length; j++) {
             if(arr[j] != 0) {
                 arr[i++] = arr[j];
