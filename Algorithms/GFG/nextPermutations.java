@@ -8,6 +8,8 @@ public class nextPermutations {
         nextPermutation(arr);
         System.out.println(Arrays.toString(arr));
     }
+
+    //works but not the optimalest approach
     static void nextPermutation(int[] arr) {
         // code here
         int i = arr.length-2;
@@ -52,6 +54,28 @@ public class nextPermutations {
         Arrays.sort(li);
         for (int i = fromInd; i < arr.length; i++) {
             arr[i] = li[j++];
+        }
+    }
+
+
+    //m2
+    public void nextPermutation1(int[] arr) {
+        int i = arr.length-2;
+        while (i > -1 && arr[i] >= arr[i+1]) {
+            i--;
+        }
+        if(i == -1) reverse(arr, 0, arr.length);
+        int j = arr.length-1;
+        while (arr[i] > arr[j]) {
+            j--;
+        }
+        swap(arr, i, j);
+        reverse(arr, i+1, arr.length-1);
+    }
+
+    public void reverse(int[] arr, int a, int b) {
+        while (a < b) {
+            swap(arr, a++, b--);
         }
     }
 }
