@@ -4,7 +4,7 @@ import java.util.Arrays;
 
 public class nextPermutations {
     public static void main(String[] args) {
-        int[] arr = {3,2,1};
+        int[] arr = {3, 2, 1, 4, 5, 6};
         nextPermutation(arr);
         System.out.println(Arrays.toString(arr));
     }
@@ -59,12 +59,15 @@ public class nextPermutations {
 
 
     //m2
-    public void nextPermutation1(int[] arr) {
+    public static void nextPermutation1(int[] arr) {
         int i = arr.length-2;
         while (i > -1 && arr[i] >= arr[i+1]) {
             i--;
         }
-        if(i == -1) reverse(arr, 0, arr.length);
+        if(i == -1) {
+            reverse(arr, 0, arr.length-1);
+            return;
+        }
         int j = arr.length-1;
         while (arr[i] > arr[j]) {
             j--;
@@ -73,7 +76,7 @@ public class nextPermutations {
         reverse(arr, i+1, arr.length-1);
     }
 
-    public void reverse(int[] arr, int a, int b) {
+    public static void reverse(int[] arr, int a, int b) {
         while (a < b) {
             swap(arr, a++, b--);
         }
