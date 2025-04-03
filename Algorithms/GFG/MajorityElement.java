@@ -20,8 +20,9 @@ public class MajorityElement {
 
         ArrayList<Integer> li = new ArrayList<>();
         for(Integer key : map.keySet()) {
-            if(map.get(key) > nums.length/3) {
-                li.add(map.get(key));
+            int w = map.get(key);
+            if(w > nums.length/3) {
+                li.add(key);
             }
         }
         return li;
