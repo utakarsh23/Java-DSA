@@ -1,4 +1,4 @@
-package GFG;
+package LeetCode;
 
 public class StockBuyAndSellII {
     public int maximumProfit(int prices[]) {
