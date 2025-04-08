@@ -1,4 +1,4 @@
-package LeetCode;
+package GFG;
 
 class maximumProductSubarray {
     public static void main(String[] args) {
