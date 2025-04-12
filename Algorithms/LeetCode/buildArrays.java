@@ -2,7 +2,7 @@ package LeetCode;
 
 import java.util.Arrays;
 
-class Solutionsss {
+class buildArrays {
     public static void main(String[] args) {
         int[] arr = {1,1,1,1,1};
         System.out.println(Arrays.toString((runningSum(arr))));
