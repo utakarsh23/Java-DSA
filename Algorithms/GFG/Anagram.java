@@ -4,15 +4,14 @@ import java.util.Arrays;
 
 public class Anagram {
     public static void main(String[] args) {
-        String s1 = "geeks";
-        String s2 = "kseeg";
+        String s1 = "bc";
+        String s2 = "ad";
         System.out.println(areAnagrams1(s1, s2));
     }
     static boolean areAnagrams(String s1, String s2) {
         if(s1.length() != s2.length()) {
             return false;
         }
-        int i = 0;
         char[] ss1 = s1.toCharArray();
         char[] ss2 = s2.toCharArray();
         Arrays.sort(ss1);
