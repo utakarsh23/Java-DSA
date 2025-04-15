@@ -2,11 +2,11 @@ package GFG;
 
 public class KNPAlgo {
     public static void main(String[] args) {
-        String s1 = "aaaaaaaaaaaab";
-        String s2 = "aaaab";
-        System.out.println(knpAlgo(s1, s2));
+        String s1 = "utkarsh";
+        String s2 = "kar";
+        System.out.println(normalSearchingAlgo(s1, s2));
     }
-    static int knpAlgo(String s1, String s2) {
+    static int normalSearchingAlgo(String s1, String s2) {
         int i = 0;
         int j = 0;
         int temp = 0;
