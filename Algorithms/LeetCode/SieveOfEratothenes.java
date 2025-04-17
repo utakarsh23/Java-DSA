@@ -2,7 +2,7 @@ package LeetCode;
 
 import java.util.Arrays;
 
-public class SieveOfErasthothenes {
+public class SieveOfEratothenes {
     public static void main(String[] args) {
         int n = 30;
         System.out.println(countPrimes(n));
