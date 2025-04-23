@@ -3,6 +3,10 @@ package LeetCode;
 import java.util.ArrayList;
 
 class insertIntervals {
+    public static void main(String[] args) {
+        int x = 2;
+        System.out.println(x + ++x);
+    }
     public int[][] insert(int[][] intervals, int[] newInterval) {
          ArrayList<int[]> res = new ArrayList<>();
         int i = 0;
