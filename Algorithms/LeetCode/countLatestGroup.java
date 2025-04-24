@@ -1,7 +1,10 @@
 package LeetCode;
 
 class countLatestGroup {
-    public int countLargestGroup(int n) {
+    public static void main(String[] args) {
+        System.out.println(countLargestGroup(13));
+    }
+    static int countLargestGroup(int n) {
         int[] sums = new int[37];
         for (int i = 1; i <= n; i++) sums[digsum(i)]++;
 
@@ -17,7 +20,7 @@ class countLatestGroup {
         return count;
     }
 
-    private int digsum(int n) {
+    static int digsum(int n) {
         int sum = 0;
         while (n > 0) {
             sum += n % 10;
