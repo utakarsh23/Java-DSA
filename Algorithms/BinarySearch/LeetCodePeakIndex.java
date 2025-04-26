@@ -2,7 +2,7 @@ package BinarySearch;//https://leetcode.com/problems/peak-index-in-a-mountain-ar
 
 public class LeetCodePeakIndex {
     public static void main(String[] args) {
-        int[] nums = {0, 10, 5, 2};
+        int[] nums = {5, 6, 1, 2, 3, 4};
 //        System.out.println(peakIndexInMountainArrays(nums));
         System.out.println(peakIndexInMountainArrayss(nums));
 //        System.out.println(peakIndexInMountainArray(nums));

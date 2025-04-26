@@ -1,7 +1,10 @@
 package LeetCode;
 
 class SearchInRotatedSortedArrayII {
-    public boolean search(int[] nums, int target) {
+    public static void main(String[] args) {
+        System.out.println(search(new int[] {5, 6, 1, 2, 3, 4}, 0));
+    }
+    static boolean search(int[] nums, int target) {
         int left = 0;
         int right = nums.length - 1;
         
