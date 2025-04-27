@@ -1,4 +1,4 @@
-package BinarySearch;//https://leetcode.com/problems/search-in-rotated-sorted-array/description/
+package BinarySearch;//https://leetcode.com/problemms/search-in-rotated-sorted-array/description/
 
 /*Approach
 *we have to find pivot in the Array,
@@ -6,11 +6,14 @@ package BinarySearch;//https://leetcode.com/problems/search-in-rotated-sorted-ar
 *now in search method, we check if the target is on which side of teh pivot and execute
  */
 
+import java.util.Arrays;
+
 //this won't work with duplicate values
 public class LeetCodeRotatedArray {
     public static void main(String[] args) {
         int[] arr = {1, 5, 8, 9, 0};
         int target = 0;
+//        int[] ars = Arrays.copyOfRange(arr, 0, 3);
         System.out.println(search(arr, target));
     }
 
