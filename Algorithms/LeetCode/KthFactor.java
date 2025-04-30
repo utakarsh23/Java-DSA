@@ -10,8 +10,9 @@ public class KthFactor {
             int s = n % i;
             if(s == 0) {
                 k--;
-                if(k == 0)
-                return i;
+                if(k == 0) {
+                    return i;
+                }
             }
         }
         return -1;
