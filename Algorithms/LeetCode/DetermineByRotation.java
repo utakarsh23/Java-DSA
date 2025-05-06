@@ -7,7 +7,7 @@ public class DetermineByRotation {
         System.out.println(findRotation1(arr, tar));
     }
     //m1
-    public boolean findRotation1(int[][] a, int[][] b) {
+    static boolean findRotation1(int[][] a, int[][] b) {
         int n=a.length;
         int c90=0,c180=0,c270=0,c0=0;
         for(int i=0;i<n;i++)
