@@ -1,10 +1,10 @@
-package LeetCode;
+package GFG;
 //https://leetcode.com/problems/two-sum-ii-input-array-is-sorted/
 import java.util.Arrays;
 import java.util.HashSet;
 import java.util.Set;
 
-public class TwoSumII {
+public class TwoSum {
     public static void main(String[] args) {
         int[] arr = {2,7,11,15};
         int target = 9;
