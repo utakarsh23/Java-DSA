@@ -1,13 +1,10 @@
 package GFG;
 
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.HashSet;
-import java.util.Set;
+import java.util.*;
 
 public class InterSectionOfTwoArrays {
     public static void main(String[] args) {
-        System.out.println(intersectionWithDuplicates(new int[] {1, 2, 1, 3, 1}, new int[] {3, 1, 3, 4, 1}));
+        System.out.println(intersectionWithDuplicates(new int[] {1, 2, 3, 4}, new int[] {4, 5, 6}));
     }
     static ArrayList<Integer> intersectionWithDuplicates(int[] a, int[] b) {
         // code here
@@ -19,17 +16,34 @@ public class InterSectionOfTwoArrays {
         while(i < a.length && j < b.length) {
             if(a[i] > b[j]) {
                 j++;
+                continue;
             } else if (a[i] < b[j]) {
                 i++;
+                continue;
             } else {
                 li.add(a[i]);
             }
             i++; j++;
         }
-        ArrayList<Integer> li1 = new ArrayList<>();
-        for (int k = 0; k < li.size(); k++) {
-            li1.add(li.hashCode());
+        return new ArrayList<>(li);
+    }
+
+    // m2
+    static ArrayList<Integer> intersectionWithDuplicates1(int[] a, int[] b) {
+        Map<Integer, Integer> freqMap = new HashMap<>();
+        ArrayList<Integer> result = new ArrayList<>();
+
+        for (int num : a) {
+            freqMap.put(num, freqMap.getOrDefault(num, 0) + 1);
         }
-        return li1;
+
+        for (int num : b) {
+            if (freqMap.containsKey(num) && freqMap.get(num) > 0) {
+                result.add(num);
+                freqMap.put(num, freqMap.get(num) - 1);
+            }
+        }
+
+        return result;
     }
 }
