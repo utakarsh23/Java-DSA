@@ -5,7 +5,7 @@ import java.util.List;
 
 public class MazePath {
     public static void main(String[] args) {
-        System.out.println(countPaths(3, 3));
+        System.out.println(countPaths(51, 9));
     }
 
 
