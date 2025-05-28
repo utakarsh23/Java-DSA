@@ -5,7 +5,7 @@ import java.util.Arrays;
 class ProductOfArrayExceptSelf {
     public static void main(String[] args) {
         int[] nums = {1,2,3,4};
-        System.out.println(Arrays.toString(productExceptSelf(nums)));
+        System.out.println(Arrays.toString(productExceptSelf2(nums)));
     }
     static int[] productExceptSelf(int[] nums) {
         int k = 0;
@@ -22,12 +22,9 @@ class ProductOfArrayExceptSelf {
         return arr;
     }
 
-    public int[] productExceptSelf1(int[] nums) {
+    static int[] productExceptSelf1(int[] nums) {
         int[] output = new int[nums.length];
-        for (int i = 0; i < nums.length; i++) {
-            output[i] = 1;
-        }
-
+        Arrays.fill(output, 1);
         int left = 1;
         for (int i = 0; i < nums.length; i++) {
             output[i] *= left;
@@ -41,5 +38,26 @@ class ProductOfArrayExceptSelf {
         }
 
         return output;
+    }
+
+    static int[] productExceptSelf2(int[] arr) {
+        int[][] ss = new int[arr.length][2];
+        int left = 1;
+        int right = 1;
+        int temp1 = 1;
+        int temp2 = 1;
+        for (int i = 0; i < arr.length; i++) {
+            left *= temp1;
+            temp1 = arr[i];
+            right *= temp2;
+            temp2 = arr[arr.length-1-i];
+            ss[i][0] = left;
+            ss[arr.length-1-i][1] = right;
+        }
+        int[] ans = new int[arr.length];
+        for (int i = 0; i < ans.length; i++) {
+            ans[i] = ss[i][0] * ss[i][1];
+        }
+        return ans;
     }
 }
