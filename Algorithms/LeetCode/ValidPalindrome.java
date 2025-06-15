@@ -3,7 +3,8 @@ package LeetCode;
 import java.util.ArrayList;
 import java.util.List;
 
-public class ValidPalindrome {
+public class
+ValidPalindrome {
     public static void main(String args[]) {
         System.out.println(isPalindromee("A man, a plan, a canal: Panama"));
     }
