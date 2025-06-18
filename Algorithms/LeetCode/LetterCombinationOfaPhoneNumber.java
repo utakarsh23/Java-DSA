@@ -55,6 +55,7 @@ public class LetterCombinationOfaPhoneNumber {
     static public List<String> letterCombinations(String digits) {
         if (digits == null || digits.length() == 0) return new ArrayList<>();
 
+        int s = digits.indexOf('2');
         Map<Character, String> map = new HashMap<>();
         map.put('2', "abc");
         map.put('3', "def");
