@@ -6,7 +6,10 @@ import java.util.List;
 import java.util.Map;
 
 public class OddStringDifference {
-        public String oddString(String[] words) {
+    public static void main(String[] args) {
+        System.out.println(oddString(new String[] {"adc","wzy","abc"}));
+    }
+        static String oddString(String[] words) {
             Map<List<Integer>, List<String>> map = new HashMap<>();
 
             for (int i = 0; i < words.length; i++) {
