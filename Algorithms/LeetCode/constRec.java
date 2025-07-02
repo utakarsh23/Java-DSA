@@ -9,6 +9,7 @@ class constRec {
         }
         
         int L = area / W;
+        //
         
         return new int[]{L, W};
     }
