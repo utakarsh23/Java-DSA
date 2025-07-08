@@ -5,7 +5,7 @@ import java.util.Map;
 
 public class FindLuckyIntegerInAnArray {
     public static void main(String[] args) {
-
+        System.out.println();
     }
     static int findLucky(int[] arr) {
         //huhh
