@@ -1,8 +1,6 @@
 package LeetCode;
 
-import java.util.Arrays;
-import java.util.HashMap;
-import java.util.Map;
+import java.util.*;
 
 public class TopKFrequentElements {
     public static void main(String[] args) {
@@ -13,14 +11,19 @@ public class TopKFrequentElements {
         for(int x : nums) {
             map.put(x, map.getOrDefault(x, 0) + 1);
         }
-        Map<Integer, Integer> ansMap = new HashMap<>();
-        for(int x : map.keySet()) {
-            ansMap.put(map.get(x), x);
+        List<Map.Entry<Integer, Integer>> entryList = new ArrayList<>(map.entrySet());
+        entryList.sort((a, b) -> b.getValue().compareTo(a.getValue()));
+
+        Map<Integer, Integer> sortedByValue = new LinkedHashMap<>();
+        for (Map.Entry<Integer, Integer> entry : entryList) {
+            sortedByValue.put(entry.getKey(), entry.getValue());
         }
+
         int[] arr = new int[k];
         int i = 0;
-        for (int x : ansMap.keySet()) {
-            arr[i%k++] = x;
+        for (int x : sortedByValue.keySet()) {
+            if(i == k) break;
+            arr[i++] = x;
         }
 
         return arr;
