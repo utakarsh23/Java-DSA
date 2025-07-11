@@ -15,6 +15,8 @@ public class KthLargestElementInAnArray {
         }
         int i = 0;
         int ans = 0;
+        System.out.println(map.keySet());
+        System.out.println(map.keySet());
         for(int x : map.keySet()) { //wrong cause map gives random values not in order in the keySet
             if(i == map.size()-k)  {
                 ans = x;
