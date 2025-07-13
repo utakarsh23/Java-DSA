@@ -5,7 +5,7 @@ import java.util.Map;
 
 public class KDiffPairsInArray {
     public static void main(String[] args) {
-        System.out.println(findPairs(new int[] {1,2,3,4,5}, 1));
+        System.out.println(findPairs(new int[] {0,2,0,4,5}, 0));
     }
     static public int findPairs(int[] nums, int k) {
             Map<Integer, Integer> map = new HashMap<>();
@@ -21,6 +21,5 @@ public class KDiffPairsInArray {
                 }
             }
             return count;
-        }
     }
 }
