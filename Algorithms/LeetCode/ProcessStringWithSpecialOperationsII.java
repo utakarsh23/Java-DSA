@@ -15,9 +15,8 @@ public class ProcessStringWithSpecialOperationsII {
                 i++;
             } while (i < s.length() && s.charAt(i) == '#') {
                 i++;
-                if (sb.length() <= 1000000000) {
-                    sb.append(sb); // safe-ish guard
-                }
+                String ss = sb.toString();
+                sb.append(ss);
             }
             while (i < s.length() && s.charAt(i) == '%') {
                 i++;
@@ -33,5 +32,31 @@ public class ProcessStringWithSpecialOperationsII {
             c = sb.toString().toCharArray()[(int) k];
         }
         return c;
+    }
+
+    public char processStr1(String s, long k) {
+        long len = 0;
+        for (char c : s.toCharArray()) {
+            if (Character.isLowerCase(c)) len++;
+            else if (c == '*' && len > 0) len--;
+            else if (c == '#') len *= 2;
+        }
+        if (k >= len) return '.';
+
+        for (int i = s.length() - 1; i >= 0; i--) {
+            char c = s.charAt(i);
+            if (Character.isLowerCase(c)) {
+                if (k == len - 1) return c;
+                len--;
+            } else if (c == '*') {
+                len++;
+            } else if (c == '#') {
+                len /= 2;
+                if (k >= len) k -= len;
+            } else if (c == '%') {
+                k = len - 1 - k;
+            }
+        }
+        return '.';
     }
 }
