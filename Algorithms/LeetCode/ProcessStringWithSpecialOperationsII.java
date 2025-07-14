@@ -2,7 +2,7 @@ package LeetCode;
 
 public class ProcessStringWithSpecialOperationsII {
     public static void main(String[] args) {
-        System.out.println(processStr("##%##*js%#qxk%oe%tas#n%%%#x*%j#%#h%%######*bxp#p##i%u%%q#o#n#%*ca%#g#hjbz#d%%k%x%#%#y%*gw%q#f#%q*v#%koe%j%k#n#y#%#sm#et%jyo%#i*h#u##a%%i##%o#rd#j###xj%#h#%hn#%igde#nyt##bkgf%iuy%%%svgintn%w%q%%q%%%%s%*r%m%%mck%vkceo*%hk%%f%%fkak%fho%*y*%%%%h%rgomby%l*%%%lbwn%qc%%*%%pp%*%pu**u*%%vwqb%%vzsjh%eb*%%%%%vnm%zg%j*ouu%i%g%z%%m%%a*o%qxdj%%%%rl*bgxjefpg%%%%%y%t%*%vgsc*dl%%%nw*rq%c%hyk*ujru%%c%p%%a%a%%%%ii*%iq*%m%noajr%xbp%%i%*%q%po*e%qd%c*%ffkfk%lo%%%x*%%h*gr%%e*%sj%**h%lev%tl**%t%sl%oli%n*%%dgah", 0));
+        System.out.println(processStr1("a#b%*", 1));
     }
     static public char processStr(String s, long k) {
         StringBuilder sb = new StringBuilder();
@@ -34,7 +34,7 @@ public class ProcessStringWithSpecialOperationsII {
         return c;
     }
 
-    public char processStr1(String s, long k) {
+    public static char processStr1(String s, long k) {
         long len = 0;
         for (char c : s.toCharArray()) {
             if (Character.isLowerCase(c)) len++;
