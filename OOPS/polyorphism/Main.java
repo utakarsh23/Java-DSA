@@ -6,6 +6,8 @@ public class Main {
         Circle circle = new Circle();
         Square square = new Square();
 
+
+        System.out.println(circle.thisExample());
         circle.area();
         System.out.println();
     }
