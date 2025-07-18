@@ -4,6 +4,8 @@ public class PowerOfFour {
 
     public static void main(String[] args) {
         System.out.println(isPowerOfFour(64));
+        String s = "asdfghjkl";
+        String t = new String("asdfghjkl");
     }
 
     static boolean isPowerOfFour(int n) {

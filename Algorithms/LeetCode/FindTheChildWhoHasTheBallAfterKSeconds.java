@@ -1,10 +1,10 @@
 package LeetCode;
 
-public class passThePillow {
+public class FindTheChildWhoHasTheBallAfterKSeconds {
     public static void main(String[] args) {
-        System.out.println(passThePillow(4, 5));
+        System.out.println(numberOfChild(4, 5));
     }
-    static public int passThePillow(int n, int time) {
+    static public int numberOfChild(int n, int time) {
         int bp1 = 1;
         boolean fwd = true;
         while (time != 0) {
@@ -21,6 +21,6 @@ public class passThePillow {
             }
             time--;
         }
-        return bp1;
+        return bp1-1;
     }
 }
