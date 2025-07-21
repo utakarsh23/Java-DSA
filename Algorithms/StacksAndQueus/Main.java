@@ -1,5 +1,8 @@
 package StacksAndQueus;
 
+import java.util.ArrayDeque;
+import java.util.Queue;
+
 public class Main {
     public static void main(String[] args) throws Exception {
 //
@@ -56,21 +59,22 @@ public class Main {
 //        que.display();
 
 
-        CircularQueue que = new CircularQueue();
-        que.insert(7);
-        que.insert(9);
-        que.insert(10);
-        que.insert(13);
-        que.insert(18);
-        que.insert(20);
-        que.insert(22);
-//        que.insert(24);
-//        que.insert(26);
-//        que.insert(28);
+//        CircularQueue que = new CircularQueue();
+//        que.insert(7);
+//        que.insert(9);
+//        que.insert(10);
+//        que.insert(13);
+//        que.insert(18);
+//        que.insert(20);
+//        que.insert(22);
+////        que.insert(24);
+////        que.insert(26);
+////        que.insert(28);
+//
+//        que.display();
+//        que.remove();
+////        que.insert(76);
+//        que.display();
 
-        que.display();
-        que.remove();
-//        que.insert(76);
-        que.display();
     }
 }
