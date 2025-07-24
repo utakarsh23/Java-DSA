@@ -1,7 +1,5 @@
 import java.util.*;
 
-private String[] args = new String[] {"yayy", "lol"};
-
 class first {
   public static void main(String[] args) {
     String t = "alpha";
