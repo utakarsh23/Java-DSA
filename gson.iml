@@ -5,6 +5,7 @@
       <sourceFolder url="file://$MODULE_DIR$/Algorithms" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/CP" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/OOPS" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/CSES" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/OOP_COLLEGE" isTestSource="false" />
     </content>
   </component>
