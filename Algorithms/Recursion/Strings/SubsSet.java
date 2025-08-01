@@ -21,6 +21,7 @@ public class SubsSet {
             ArrayList<String> list = new ArrayList<>();
             list.add(p);
             return list;
+            //
         }
         char ch = up.charAt(0);
         ArrayList<String> left = subseqList(p+ch, up.substring(1));
