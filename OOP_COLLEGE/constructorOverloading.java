@@ -13,6 +13,7 @@ class Circle {
     y = c.y;
     r = c.r;
   }
+
   Circle(double c) {
     x = 0; y = 0; r = c;
   }
@@ -24,6 +25,8 @@ class Circle {
     return 2 * Math.PI * r;
   }
 }
+
+
 public class constructorOverloading {
   public static void main(String[] args) {
     Circle c1 = new Circle(0.0, 0.0, 5.0);
