@@ -28,6 +28,7 @@ public class absssss {
             return arr;
         }
         arr[0] = arr[1] = 0;
+        /// /
         for(int i = 2; i <= Math.sqrt(n); i++) {
             if(arr[i] == 1) {
                 for(int j = i * i; j <= n; j+=i) {
