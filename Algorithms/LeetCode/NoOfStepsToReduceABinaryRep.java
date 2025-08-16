@@ -19,7 +19,7 @@ class NoOfStepsToReduceABinaryRep {
     char[] s = a.toString().toCharArray();
     char[] t = new char[] {'1'};
     int i = s.length - 1;
-    int j = t.length - 1;
+    int j = 0;
     int carry = 0;
     StringBuilder sb = new StringBuilder();
 
