@@ -3,9 +3,9 @@ package LeetCode;
 import java.util.ArrayList;
 import java.util.List;
 
-public class COuntBinarySubstrings {
+public class CountBinarySubstrings {
     public static void main(String[] args) {
-        System.out.println(countBinarySubstrings("00100"));
+        System.out.println(countBinarySubstrings1("001100"));
     }
     static public int countBinarySubstrings(String s) {
         List<int[]> li = new ArrayList<>();
@@ -30,7 +30,28 @@ public class COuntBinarySubstrings {
     }
 
     //m2
-    public int countBinarySubstrings1(String s) {
-
+    public static int countBinarySubstrings1(String s) {
+        int i = 0;
+        int len = s.length();
+        int temp = 0;
+        int ans = 0;
+        while (i < len) {
+            int a = temp;
+            i = temp;
+            char c = s.charAt(i);
+            while (i < s.length() && s.charAt(i) == c) {
+                i++;
+            }
+            temp = i;
+            a = i - a;
+            int b = i;
+            c = i < s.length() ? s.charAt(i) : s.charAt(i-1);
+            while (i < s.length() && s.charAt(i) == c) {
+                i++;
+            }
+            b = i - b;
+            ans += Math.min(a, b);
+        }
+        return ans;
     }
 }
