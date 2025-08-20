@@ -1,44 +1,33 @@
 package Randoms;
 
-//import dorkbox.systemTray.*;
+abstract class Vehicle {
+    public abstract void startEngine();
 
-import java.awt.*;
-import java.util.HashMap;
-import java.util.Map;
+    public void fuelType(String type) {
+        System.out.println("Fuel type: " + type);
+    }
+}
+
+class Car extends Vehicle {
+    public void startEngine() {
+        System.out.println("Car engine started with a key.");
+    }
+}
+
+class Bike extends Vehicle {
+    public void startEngine() {
+        System.out.println("Bike engine started with self-start.");
+    }
+}
 
 public class Main {
-    static Map<Integer, Integer> map = new HashMap<>();
-
     public static void main(String[] args) {
-        int n = 70;
-        long start = System.nanoTime();
-        System.out.println(fibo1(n));
-        long end = System.nanoTime();
-        System.out.println("Execution time: " + (end - start)/1_000_000.0 + " ms");
+        Vehicle v1 = new Car();
+        v1.startEngine();
+        v1.fuelType("Petrol");
 
-
-        long start1 = System.nanoTime();
-        System.out.println(fibo(n));
-        long end1 = System.nanoTime();
-        System.out.println("Execution time: " + (end1 - start1)/1_000_000.0 + " ms");
-    }
-
-    static int fibo(int x) {
-        if(x <= 1) {
-            return 1;
-        }
-        if(map.containsKey(x)) {
-            return map.get(x);
-        }
-        int ans = fibo(x-1) + fibo(x-2);
-        map.put(x, ans);
-        return ans;
-    }
-
-    static int fibo1(int x) {
-        if(x <= 1) {
-            return 1;
-        }
-        return fibo(x-1) + fibo(x-2);
+        Vehicle v2 = new Bike();
+        v2.startEngine();
+        v2.fuelType("Petrol");
     }
 }

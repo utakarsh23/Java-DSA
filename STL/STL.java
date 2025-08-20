@@ -6,6 +6,42 @@ import java.util.*;
 
 public class STL {
 
+
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+        int t = input.nextInt();
+
+
+        //single n
+        while(t-- > 0) {
+            int n = input.nextInt();
+
+        }
+
+        //single n
+        while(t-- > 0) {
+            int n = input.nextInt();
+            int[] arr = new int[n];
+            for (int i = 0; i < n; i++) {
+                arr[i] = input.nextInt();
+            }
+        }
+
+        //single n with array
+        while(t-- > 0) {
+            int n = input.nextInt();
+            int[] arr = new int[n];
+            int[] arr1 = new int[n];
+            for (int i = 0; i < n; i++) {
+                arr[i] = input.nextInt();
+            }
+            for (int i = 0; i < n; i++) {
+                arr1[i] = input.nextInt();
+            }
+        }
+    }
+
+
     //input
     static class In {
         BufferedReader br;
@@ -20,7 +56,6 @@ public class STL {
         double nextDouble() throws IOException { return Double.parseDouble(next()); }
         String nextLine() throws IOException { return br.readLine(); }
     }
-
 
     //output
     static PrintWriter out = new PrintWriter(System.out);
