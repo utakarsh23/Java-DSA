@@ -1,4 +1,4 @@
-package R;
+package CodeChef.S200;
 
 import java.util.Scanner;
 

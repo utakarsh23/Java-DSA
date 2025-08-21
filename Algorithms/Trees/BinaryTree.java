@@ -15,6 +15,8 @@ public class BinaryTree {
         public Node(int value) {
             this.value = value;
         }
+
+
     }
 
     private Node root;
@@ -25,6 +27,28 @@ public class BinaryTree {
         root = new Node(val);
         populate(scanner, root);
     }
+    public void populate(int[] nums) {
+        for (int num : nums) {
+            this.insert(num);
+        }
+    }
+
+    public void insert(int value) {
+        root = insert(value, root);
+    }
+
+    public Node insert(int val, Node node) {
+        if(node == null) {
+            node = new Node(val);
+            return node;
+        }
+        if(val < node.value) node.left = insert(val, node.left);
+        else if(val > node.value) node.right = insert(val, node.right);
+
+        return node;
+    }
+
+
     public void populate(Scanner scanner, Node node) {
         System.out.println("Do you wanna enter left of " + node.value);
         boolean left = scanner.nextBoolean();

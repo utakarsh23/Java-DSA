@@ -54,7 +54,7 @@ class mainClass3 {
         System.out.println(car.getYear());
         Car car1 = new Car();
         car1.setMake("Porsche");
-        car1.setModels("R");
+        car1.setModels("CodeChef/S200");
         car1.setYear("2023");
         System.out.println(car1.getMake());
         System.out.println(car1.getModels());

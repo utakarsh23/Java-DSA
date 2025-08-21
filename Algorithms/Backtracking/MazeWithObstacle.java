@@ -23,7 +23,7 @@ public class MazeWithObstacle {
             PathsRestrictions(p+"D", maze, row+1, col);
         }
         if(col < maze[0].length-1) {
-            PathsRestrictions(p+"R", maze, row, col+1);
+            PathsRestrictions(p+ "CodeChef/S200", maze, row, col+1);
         }
     }
 }

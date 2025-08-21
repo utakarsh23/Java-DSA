@@ -29,7 +29,7 @@ public class MazePath {
             Paths(p+"D", row-1, col);
         }
         if(col > 1) {
-            Paths(p+"R", row, col-1);
+            Paths(p+ "CodeChef/S200", row, col-1);
         }
     }
 
@@ -43,7 +43,7 @@ public class MazePath {
 
         List<String> str = new ArrayList<>();
         if(col > 1) {
-            str.addAll(PathNames(s+"R", row, col-1));
+            str.addAll(PathNames(s+ "CodeChef/S200", row, col-1));
         }
         if(row > 1) {
             str.addAll(PathNames(s+"D", row-1, col));

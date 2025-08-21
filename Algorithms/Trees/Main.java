@@ -22,8 +22,8 @@ public class Main {
 //        tree.display();
 //        System.out.println(tree.height());
 
-        SegmentTree st = new SegmentTree(new int[] {3, 8, 6, 7, -2, -8, 4, 9});
-//        st.display();
-        System.out.println(st.query(1, 6));
+        BinaryTree st = new BinaryTree();
+        st.populate(new int[] {3, 8, 6, 7, -2, -8, 4, 9});
+        st.display();
     }
 }
