@@ -38,6 +38,21 @@ public class heights {
         return Math.max(l, r);
     }
 
+    public int minDepth(TreeNode root) {
+        if(root == null) return 0;
+        // int min = Math.min(minDepth(root.left), minDepth(root.right));
+        // return min == 0 ? 1 + Math.max(minDepth(root.left), minDepth(root.right)) : 1 + min;
+        int left = minDepth(root.left);
+        int right = minDepth(root.right);
+
+
+        if (left == 0 || right == 0) {
+            return 1 + Math.max(left, right);
+        }
+
+        return 1 + Math.min(left, right);
+    }
+
 
 
 
