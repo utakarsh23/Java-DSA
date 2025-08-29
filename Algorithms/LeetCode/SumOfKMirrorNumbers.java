@@ -6,7 +6,7 @@ import java.util.List;
 
 public class SumOfKMirrorNumbers {
     public static void main(String[] args) {
-        System.out.println(kMirror(7, 17));
+        System.out.println(kMirror2(2, 28));
     }
 
     //brute force method;
@@ -77,22 +77,28 @@ public class SumOfKMirrorNumbers {
 
     static long kMirror1(int k, int n) {
         long sum = 0;
-        int count = 0;
-        int length = 1;
+//        int count = 0;
+//        int length = 1;
+//
+//        while (count < n) {
+//            List<Long> palins = generatePalindromes(length);
+//            for (long pal : palins) {
+//                if (palinBasek(pal, k)) {
+//                    sum += pal;
+//                    count++;
+//                    if (count == n) break;
+//                }
+//            }
+//            length++;
+//        }
 
-        while (count < n) {
-            List<Long> palins = generatePalindromes(length);
-            for (long pal : palins) {
-                if (palinBasek(pal, k)) {
-                    sum += pal;
-                    count++;
-                    if (count == n) break;
-                }
-            }
-            length++;
+        List<Long> list = genPalins(n, k);
+        for(Long x : list) {
+            sum += x;
         }
 
         return sum;
+//        return sum;
     }
 
 
@@ -111,4 +117,82 @@ public class SumOfKMirrorNumbers {
 
         return result;
     }
+
+
+    /// /
+
+    static List<Long> genPalins1s(int n, int k) {
+        List<Long> list = new ArrayList<>();
+        long i = 1;
+        while (list.size() < n) {
+            if (i < 10) {
+                if (palinBaseK(i, k)) {
+                    list.add(i);
+                }
+            } else {
+                String t = String.valueOf(i) + new StringBuilder().append(i).reverse().deleteCharAt(0);
+                long j = Long.parseLong(t);
+                if (palinBaseK(j, k)) {
+                    list.add(j);
+                }
+            }
+            i++;
+        }
+        return list;
+    }
+
+
+
+
+
+
+
+    static List<Long> genPalins(int n, int k) {
+        List<Long> list = new ArrayList<>();
+
+        long[] allPalinlist = new long[] {1, 2, 3, 4, 5, 6, 7, 8, 9, 11, 22, 32, 44, 55, 66, 77, 88, 99, 101};
+
+
+        int i = 10;
+        while (list.size() < n) {
+            long l = allPalinlist[i % 10];
+            if (palinBaseK(l, k)) {
+                    list.add(l);
+            }
+            String t = String.valueOf(l) + new StringBuilder().append(l).reverse().deleteCharAt(0);
+            long j = Long.parseLong(t);
+            if (palinBaseK(j, k)) {
+                list.add(j);
+            }
+            allPalinlist[i%10] = j;
+            i++;
+        }
+        return list;
+    }
+
+
+
+
+
+    static boolean palinBaseK(long x, int k) {
+        String s = Long.toString(x, k);
+        int l = 0, r = s.length() - 1;
+        while (l < r) {
+            if (s.charAt(l++) != s.charAt(r--))
+                return false;
+        }
+        return true;
+    }
+
+
+    static long kMirror2(int k, int n) {
+        long sum = 0;
+        List<Long> list = genPalins(n, k);
+        for(Long x : list) {
+            sum += x;
+        }
+
+        return sum;
+    }
+
 }
