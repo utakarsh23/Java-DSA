@@ -18,10 +18,10 @@ class SortMatrixByDiagonals {
     }
 
 
-    public int[][] sortMatrix(int[][] grid) {
-        int size = (2 * grid.length)-1;
-        
-    }
+//    public int[][] sortMatrix(int[][] grid) {
+//        int size = (2 * grid.length)-1;
+//
+//    }
 
 
     public static void main(String[] args) {
