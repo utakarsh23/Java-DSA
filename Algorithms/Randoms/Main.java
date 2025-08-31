@@ -1,19 +1,26 @@
 package Randoms;
 
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.Collections;
-import java.util.List;
+import java.util.*;
 
 public class Main {
-    public static void main(String[] args) {
-//        List<Integer> list = new ArrayList<>();
-//        for (int i = 1; i < 100000; i++) {
-//            if(palin(i)) {
-//                list.add(i);
-//            }
-//        }
-        System.out.println(generatePalin(100000));
+    public static void main (String[] args) throws java.lang.Exception
+    {
+        List<String> list = List.of("27", "28", "29", "30", "31", "01", "02", "03", "04", "05", "06");
+
+        Scanner sc = new Scanner(System.in);
+        int t = sc.nextInt();
+        sc.nextLine();
+        for (int i = 0; i < t; i++) {
+            String s= sc.nextLine();
+            String[] w = s.split(" ");
+            if(!w[1].equals("AUG") && !w[1].equals("SEP") || !w[2].equals("2025")) {
+                System.out.println("NO");
+            } else if(list.contains(w[0])) {
+                System.out.println("Yes");
+            } else {
+                System.out.println("No");
+            }
+        }
     }
 
     static boolean palin(int n) {
