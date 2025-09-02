@@ -1,16 +1,19 @@
 package LeetCode.Trees;
 
-import java.util.ArrayList;
-import java.util.LinkedList;
-import java.util.List;
-import java.util.Queue;
+import java.util.*;
 
 public class FindModeInBST {
     public static void main(String[] args) {
-        // Build a sample BST: [1,null,2,2]
-        TreeNode root = new TreeNode(1);
-        root.right = new TreeNode(2);
-        root.right.left = new TreeNode(2);
+        // Build a sample BST: [1,null,2,2] [6,2,8,0,4,7,9,null,null,2,6]
+        TreeNode root = new TreeNode(6);
+        root.right = new TreeNode(8);
+        root.left = new TreeNode(2);
+        root.left.left = new TreeNode(0);
+        root.left.right = new TreeNode(4);
+        root.left.right.left = new TreeNode(2);
+        root.left.right.right = new TreeNode(6);
+        root.right.left = new TreeNode(7);
+        root.right.right = new TreeNode(9);
 
         FindModeInBST obj = new FindModeInBST();
         int[] result = obj.findMode(root);
@@ -20,43 +23,43 @@ public class FindModeInBST {
     }
 
     public int[] findMode(TreeNode root){
-        // Map<Integer, Integer> map = new HashMap<>();
+        Map<Integer, Integer> map = new HashMap<>();
         if(root == null) return new int[] {};
-        List<int[]> mainlist = new ArrayList<>();
         Queue<TreeNode> queue = new LinkedList<>();
-//        int[] arr = new int[] {root.val, 1};
-//        mainlist.add(arr);
         queue.offer(root);
-        helperFunc(queue, mainlist);
-        return mainlist.getFirst();
+        helperFunc(queue, map);
+        List<Integer> list = new ArrayList<>();
+        int temp = 0;
+        for(int x : map.keySet()) {
+            int item = map.get(x);
+            if(item > temp) {
+                list.clear();
+                temp = item;
+                list.add(x);
+            } else if(item == temp){
+                list.add(x);
+            }
+        }
+        int[] arr = new int[list.size()];
+        int i = 0;
+        for(int x : list) {
+            arr[i++] = x;
+        }
+        return arr;
     }
 
-    static void helperFunc(Queue<TreeNode> queue, List<int[]> list) {
+    static void helperFunc(Queue<TreeNode> queue, Map<Integer, Integer> map) {
         if(queue.isEmpty()) {
             return;
         }
         int len = queue.size();
-        int[] arr = new int[2];
         for(int i = 0; i < len; i++) {
             TreeNode node = queue.poll();
             if(node.left != null) queue.offer(node.left);
             if(node.right != null) queue.offer(node.right);
-            if(!list.isEmpty() && list.getFirst()[0] < node.val) {
-                while(!list.isEmpty()) {
-                    list.removeFirst();
-                }
-                arr[0] = node.val;
-                arr[1] = 1;
-                list.addFirst(arr);
-            } else if(!list.isEmpty() && list.getFirst()[0] == node.val) {
-                list.getFirst()[1]++;
-            } else {
-                arr[0] = node.val;
-                arr[1] = 1;
-                list.addFirst(arr);
-            }
+            map.put(node.val, map.getOrDefault(node.val, 0) + 1);
         }
-        helperFunc(queue, list);
+        helperFunc(queue, map);
     }
 
     static void printArray(int[] arr) {
