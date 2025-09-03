@@ -4,21 +4,9 @@ import java.util.*;
 
 public class Main {
     public static void main (String[] args) throws java.lang.Exception {
-        STX stx = new STX();
-        stx.push(100);
-        stx.push(100);
-        stx.push(100);
-        stx.push(100);
-        stx.push(100);
-        stx.push(100);
-        stx.push(100);
-        stx.push(100);
-        stx.push(100);
-        stx.push(100);
-        stx.push(100);
-        stx.push(100);
-        stx.push(100);
-        stx.push(100);
-        stx.display();
+        StringBuilder sb = new StringBuilder("qwtyuiop");
+      while (true) {
+          System.out.println(sb.append(sb));
+      }
     }
 }
