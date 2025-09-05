@@ -2,7 +2,12 @@ package Mathematics;
 
 public class GCD_HCF {
     public static void main(String[] args) {
-        System.out.println(gcd(17, 95));
+
+        System.out.println(lcm(17, 95));
+    }
+
+    static int lcm(int a, int b) {
+        return a * b/ gcd(a, b);
     }
 
     //euclidean algorithm

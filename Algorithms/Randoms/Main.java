@@ -1,12 +1,37 @@
 package Randoms;
 
-import java.util.*;
+class Parent {
+    String name = "Parent";
+
+    Parent() {
+        System.out.println("Parent constructor called");
+    }
+
+    void showMessage() {
+        System.out.println("Hello from Parent class");
+    }
+}
+
+class Child extends Parent {
+    String name = "Child";
+
+    Child() {
+        super();
+        System.out.println("Child constructor called");
+    }
+
+    void display() {
+        System.out.println("Child name = " + name);
+
+        System.out.println("Parent name = " + super.name);
+
+        super.showMessage();
+    }
+}
 
 public class Main {
-    public static void main (String[] args) throws java.lang.Exception {
-        StringBuilder sb = new StringBuilder("qwtyuiop");
-      while (true) {
-          System.out.println(sb.append(sb));
-      }
+    public static void main(String[] args) {
+        Child c = new Child();
+        c.display();
     }
 }
