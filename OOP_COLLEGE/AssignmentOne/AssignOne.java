@@ -231,6 +231,7 @@ public class AssignOne {
 
     static void questionTwentyFour(){
         Scanner input = new Scanner(System.in);
+
         int n = input.nextInt();
         int[] digits = new int[n];
         for (int i = 0; i < n; i++) {

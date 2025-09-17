@@ -7,7 +7,7 @@ public class ReplaceNonCoPrimesNoInAnArray {
     public static void main(String[] args) {
         System.out.println(replaceNonCoprimes(new int[] {31,97561,97561,97561,97561,97561,97561,97561,97561}));
     }
-    public static List<Long> replaceNonCoprimes(int[] nums) {
+    public static List<Integer> replaceNonCoprimes(int[] nums) {
         List<Integer> stack = new ArrayList<>();
         for (int num : nums) {
             // Push current number
