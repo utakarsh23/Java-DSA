@@ -14,7 +14,6 @@ public class DetectCapital {
         }
         if(cap >0 && low == 0) return true;
         if(low >0 && cap == 0) return true;
-        if(cap == 1 && Character.isUpperCase(l1)) return true;
-        return false;
+        return cap == 1 && Character.isUpperCase(l1);
     }
 }
