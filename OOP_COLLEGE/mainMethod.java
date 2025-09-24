@@ -11,7 +11,7 @@ class nonsttaicsExample {
 }
 
 class sttaicsExample1 {
-    static int sum(int a, int b) {
+    public static int sum(int a, int b) {
         return a + b;
     }
 }
