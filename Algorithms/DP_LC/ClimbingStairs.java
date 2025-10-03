@@ -1,9 +1,7 @@
 package DP_LC;
 
-import java.util.ArrayList;
 import java.util.Arrays;
-import java.util.Collections;
-import java.util.List;
+
 
 public class ClimbingStairs {
     public static void main(String[] args) {
