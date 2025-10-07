@@ -1,9 +1,11 @@
 package LeetCode;
 
+import java.util.Collection;
+
 class ExcelSheetColTitle {
     public String convertToTitle(int columnNumber) {
         StringBuilder result = new StringBuilder();
-        
+
         while (columnNumber > 0) {
             columnNumber--;
             
