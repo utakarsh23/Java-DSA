@@ -1,13 +1,15 @@
 package LeetCode;
 
+import java.util.Stack;
+
 class ReformatTheString {
     public String reformat(String s) {
         if (s.length() == 1)
             return s;
 
         StringBuilder sb = new StringBuilder();
-        Stack<Character> letters = new Stack();
-        Stack<Character> digits = new Stack();
+        Stack<Character> letters = new Stack<>();
+        Stack<Character> digits = new Stack<>();
 
         for (char ch : s.toCharArray()) {
             if (Character.isLetter(ch)) {
