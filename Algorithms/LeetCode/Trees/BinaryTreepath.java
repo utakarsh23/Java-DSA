@@ -1,5 +1,8 @@
 package LeetCode.Trees;
 
+import java.util.ArrayList;
+import java.util.List;
+
 /**
  * Definition for a binary tree node.
  * public class TreeNode {
@@ -17,20 +20,22 @@ package LeetCode.Trees;
  */
 class BinaryTreepath {
     public List<String> binaryTreePaths(TreeNode root) {
-        StringBuilder sb = new StringBuilder();
-        sb.append(root.val);
-
+        List<String> result = new ArrayList<>();
+        helper(root, new StringBuilder(), result);
+        return result;
     }
-    public List<String> helperFunc(TreeNode node, StringBuilder s) {
-        if(node == null){
-            return "";
-        }
-        s.append(node.val);
+    void helper(TreeNode node, StringBuilder path, List<String> result){
+        if(node == null) return;
+        int len = path.length();
+        path.append(node.val);
         if(node.left == null && node.right == null){
-            return "";
+            result.add(path.toString());
         }
-        s.append("->");
-
-
+        else{
+            path.append("->");
+            helper(node.left, path, result);
+            helper(node.right, path, result);
+        }
+        path.setLength(len);
     }
 }
