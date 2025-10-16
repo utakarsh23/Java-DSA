@@ -40,7 +40,7 @@ class College implements Student, Teacher {
 }
 
 public class Main {
-    public static void main(String[] args) s{
+    public static void main(String[] args) {
         College c = new College();
         c.setStudentInfo("Aayush", 101, "Computer Engineering");
         c.setTeacherInfo("Dr. Sharma", "Data Structures", 55000);
