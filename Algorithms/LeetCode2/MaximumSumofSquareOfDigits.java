@@ -2,7 +2,7 @@ package LeetCode2;
 
 public class MaximumSumofSquareOfDigits {
     public static void main(String[] args) {
-        System.out.println(maxSumOfSquares(2, 3));
+        System.out.println(maxSumOfSquares1(2, 17));
     }
     public static String maxSumOfSquares(int num, int sum) {
         StringBuilder sb = new StringBuilder(num);
@@ -36,5 +36,18 @@ public class MaximumSumofSquareOfDigits {
             ans.append(n.charAt(len--));
         }
         return ans.toString();
+    }
+
+
+    public static String maxSumOfSquares1(int num, int sum) {
+        if (num * 9 < sum) {
+            return "";
+        }
+        StringBuilder res = new StringBuilder();
+        res.append("9".repeat(sum / 9));
+        if (res.length() < num) {
+            res.append(sum % 9).append("0".repeat(num - res.length()));
+        }
+        return res.toString();
     }
 }
