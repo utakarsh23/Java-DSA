@@ -6,6 +6,7 @@
       <sourceFolder url="file://$MODULE_DIR$/Algorithms" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/OOP_COLLEGE" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/Threading" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/CP" isTestSource="false" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
