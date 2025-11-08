@@ -184,6 +184,7 @@ public class STL_CP {
     //prefix sum
     static long[] prefixSum(int[] arr) {
         long[] pre = new long[arr.length];
+        pre[0] = arr[0];
         for (int i = 0; i < arr.length-1; i++) {
             pre[i+1] = pre[i] + arr[i];
         }
