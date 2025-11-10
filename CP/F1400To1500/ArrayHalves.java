@@ -46,7 +46,7 @@ public class ArrayHalves {
             }
             int i = n-1;
             int j = 2*n-1;
-            int ans = 0;
+            long ans = 0;
             while(i >= 0 && j >= n) {
                 while(i >= 0 && nums[i] <= n) {
                     i--;
