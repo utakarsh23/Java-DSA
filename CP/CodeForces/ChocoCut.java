@@ -1,3 +1,5 @@
+package CodeForces;
+
 import java.util.Arrays;
 //https://www.codechef.com/problems/CHOCUT
 

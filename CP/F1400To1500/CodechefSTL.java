@@ -38,7 +38,7 @@ class Codechef
 	
 	
     
-	public static void main (String[] args) throws java.lang.Exception { new Codechef().solve();}
+	public static void main (String[] args) throws Exception { new RemoveElement().solve();}
 	
 	FastReader in; PrintWriter out;
 	Codechef() {
