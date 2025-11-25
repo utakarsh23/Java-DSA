@@ -1,5 +1,8 @@
 package LeetCode2;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class BinaryPrefixDevisibleby5 {
     public List<Boolean> prefixesDivBy5(int[] nums) {
         List<Boolean> answer = new ArrayList<Boolean>();
