@@ -1,42 +1,33 @@
 package F1400To1500;
 
 import java.io.PrintWriter;
-import java.util.Arrays;
+import java.util.ArrayList;
+import java.util.List;
 
-class MaximizeColors
+class FitToPlay
 {
     
 	void solve() throws Exception {
         long t = nl();
         while(t-- > 0) {
-            long n = 3;
-            long[] a = nll(n);
-
-            Arrays.sort(a);
-            long temp = a[0];
-            a[0] = a[2];
-            a[2] = temp;
-
-            long ans = 0;
-
-            for (int i = 0; i < 3; i++) {
-                if (a[i] > 0) {
-                    ans++;
-                    a[i]--;
-                }
+            int n = ni();
+            long[] arr = nll(n);
+            long[] mins = new long[n];
+            long min = arr[0];
+            int k = 0;
+            for(long x : arr) {
+                min = Math.min(min, x);
+                mins[k++] = min;
             }
 
-            for (int i = 0; i < 3; i++) {
-                for (int j = i + 1; j < 3; j++) {
-                    if (a[i] > 0 && a[j] > 0) {
-                        ans++;
-                        a[i]--;
-                        a[j]--;
-                    }
-                }
+            long max = Integer.MIN_VALUE;
+            for(int i = 1; i < n; i++) {
+                max = Math.max(max, arr[i]-mins[i]);
             }
-            pn(ans);
 
+
+            if(max <= 0) pn("UNFIT");
+            else pn(max);
 
         }
         out.flush();
@@ -62,10 +53,10 @@ class MaximizeColors
 	
 	
     
-	public static void main (String[] args) throws java.lang.Exception { new MaximizeColors().solve();}
+	public static void main (String[] args) throws java.lang.Exception { new FitToPlay().solve();}
 	
 	FastReader in; PrintWriter out;
-    MaximizeColors() {
+	FitToPlay() {
             in = new FastReader();
             out = new PrintWriter(System.out);
         }
