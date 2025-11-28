@@ -19,7 +19,7 @@ public class subsets {
             return result;
         }
         int first = arr[0];
-        int rest[] = Arrays.copyOfRange(arr, 1, arr.length);
+        int[] rest = Arrays.copyOfRange(arr, 1, arr.length);
         int[] pArr = Arrays.copyOf(proArr, proArr.length+1);
 
         pArr[proArr.length] = first;
