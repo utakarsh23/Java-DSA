@@ -31,7 +31,7 @@ public class LongestWordInDictionary {
                     ans = "";
                 }
                 t = t.substring(0, t.length()-1);
-            }
+            }///ayeu
             mainAns = mainAns.length() <= ans.length() ? ans : mainAns;
         }
         return mainAns;
