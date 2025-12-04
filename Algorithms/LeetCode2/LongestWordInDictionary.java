@@ -16,17 +16,14 @@ public class LongestWordInDictionary {
         for(String s : words) {
             set.add(s);
         }
-        String ans = "";
-        int ml = 0;
         String mainAns = "";
         for(int i = n-1; i >= 0; i--) {
-            String ans = "";
             String s = words[i];
+            String ans = "";
             String t = s.substring(0, s.length());
             while(!t.isEmpty()) {
                 if(set.contains(t)) {
                     ans = ans.length() <= t.length() ? t : ans;
-                    ml = ans.length();
                 } else {
                     ans = "";
                 }
