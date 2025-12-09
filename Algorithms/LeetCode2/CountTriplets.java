@@ -1,6 +1,6 @@
 package LeetCode2;
 
-class Solution {
+class CountTriplets {
     public int countTriples(int n) {
         int res = 0;
         for (int u = 2; u * u <= n; u++) {
