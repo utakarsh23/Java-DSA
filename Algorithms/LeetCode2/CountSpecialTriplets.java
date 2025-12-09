@@ -108,7 +108,7 @@ public class CountSpecialTriplets {
                             right.getOrDefault(doubleValue, 0)
             ) % mod;
         }
-        return (int)ans;////
+        return (int)ans;//
     }
 
 
