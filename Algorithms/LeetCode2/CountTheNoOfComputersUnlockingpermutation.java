@@ -39,7 +39,7 @@ public class CountTheNoOfComputersUnlockingpermutation {
 
 
     //
-    ublic int countPermutations(int[] complexity) {
+    public int countPermutations1(int[] complexity) {
         int n = complexity.length;
         for (int i = 1; i < n; i++) {
             if (complexity[i] <= complexity[0]) {
