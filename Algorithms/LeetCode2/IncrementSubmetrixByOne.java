@@ -1,6 +1,7 @@
 package LeetCode2;
 
-public class IncrementSubmetrixByOne {
+public class
+IncrementSubmetrixByOne {
         public int[][] rangeAddQueries(int n, int[][] queries) {
             int[][] arr = new int[n][n];
             for(int[] x : queries) {
