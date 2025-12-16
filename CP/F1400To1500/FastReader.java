@@ -66,7 +66,7 @@ class Codechef
 }
 
 
-class FastReader{
+public class FastReader{
 	BufferedReader br;
     StringTokenizer st;
 	    public FastReader(){
@@ -77,7 +77,7 @@ class FastReader{
 	     br = new BufferedReader(new FileReader(s));
 	 }
 
-	 String next() throws Exception{
+	 public String next() throws Exception{
 	     while (st == null || !st.hasMoreElements()){
 	         try{
 	             st = new StringTokenizer(br.readLine());
@@ -88,7 +88,7 @@ class FastReader{
 	     return st.nextToken();
 	 }
 
-	 String nextLine() throws Exception{
+	 public String nextLine() throws Exception{
 	     String str = "";
 	     try{   
 	         str = br.readLine();
