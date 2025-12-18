@@ -10,6 +10,9 @@ public class GrayCode {
 //            System.out.print(Integer.toBinaryString(x) + " ");
 //        }
         System.out.println(new GrayCode().grayCode(3));
+        int[] ar1 = new int[] {1, 2};
+        int[] ar2 = new int[] {3, 4};
+
     }
 
     //          0000, 0001, 0011, 0010, 0110, 0111, 0101, 0100, | 1100, 1101, 1111, 1110, 1010, 1011, 1001, 1000
