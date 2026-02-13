@@ -8,7 +8,7 @@ public class Sort {
         bubbleSort(arrr);
         System.out.println(Arrays.toString(arrr));
     }
-    //main
+    //Main
     static void bubbleSort(int[] nums) {
         boolean swapped;
         for (int i = 0; i < nums.length; i++) {

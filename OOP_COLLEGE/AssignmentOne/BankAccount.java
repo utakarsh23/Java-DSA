@@ -88,7 +88,7 @@ class mainClass {
                 if (x == 4) {
                     break;
                 }
-                System.out.println("Press x to return to main menu");
+                System.out.println("Press x to return to Main menu");
                 input.next();
 
             }

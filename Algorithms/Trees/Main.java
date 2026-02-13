@@ -23,7 +23,7 @@ public class Main {
 //        System.out.println(tree.height());
 
         BinaryTree st = new BinaryTree();
-        st.populate(new int[] {3, 8, 6, 7, -2, -8, 4, 9});
+//        st.populate(new int[] {3, 8, 6, 7, -2, -8, 4, 9});
         st.display();
     }
 }

@@ -4,7 +4,7 @@ import java.util.Arrays;
 import java.util.Scanner;
 
 public class Q1 {
-//    public static void main(String[] args) {
+//    public static void Main(String[] args) {
 //        Scanner input = new Scanner(System.in);
 //        String s = input.nextLine();
 //        char[] ars = s.toCharArray();

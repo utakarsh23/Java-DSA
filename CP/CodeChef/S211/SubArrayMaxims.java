@@ -4,7 +4,7 @@ import java.util.Arrays;
 import java.util.Scanner;
 //https://www.codechef.com/START211D
 public class SubArrayMaxims {
-//    public static void main(String[] args) throws java.lang.Exception {
+//    public static void Main(String[] args) throws java.lang.Exception {
 //        Scanner in = new Scanner(System.in);
 //        int t = in.nextInt();
 //        while(t-- > 0) {
@@ -29,7 +29,7 @@ public class SubArrayMaxims {
 //        }
 //    }
 //
-//    public static void main(String[] args) throws java.lang.Exception {
+//    public static void Main(String[] args) throws java.lang.Exception {
 //        Scanner in = new Scanner(System.in);
 //        int t = in.nextInt();
 //        while(t-- > 0) {

@@ -628,7 +628,7 @@ public class InteractiveBSTVisualizer extends JPanel {
     // lerp
     private static double lerpD(double a, double b, double t) { return a + (b-a)*t; }
 
-    // ====== main & helper ======
+    // ====== Main & helper ======
     public static void main(String[] args) {
         SwingUtilities.invokeLater(() -> {
             InteractiveBSTVisualizer panel = new InteractiveBSTVisualizer();

@@ -22,7 +22,7 @@ public class SubArraysDuplicates {
         }
         return outer;
     }
-    //main one
+    //Main one
     static List<List<Integer>> subseqDUplicatesss(int[] arr) {
         int start = 0;
         int end = 0;

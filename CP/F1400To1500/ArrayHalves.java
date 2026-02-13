@@ -6,7 +6,7 @@ import java.util.List;
 import java.util.Scanner;
 
 public class ArrayHalves {
-//    public static void main(String[] args) throws Exception {
+//    public static void Main(String[] args) throws Exception {
 //        Scanner in = new Scanner(System.in);
 //        int t = in.nextInt();
 //        while (t-- > 0) {

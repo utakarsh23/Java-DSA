@@ -31,10 +31,10 @@ public class InnerClasses {
 
     public static void main(String[] args) {
         innerStatic obj1 = new innerStatic("Utkarsh");
-        /// can be assess through, because it is a static inner class as the main classes, static and the main class is static too
+        /// can be assess through, because it is a static inner class as the Main classes, static and the Main class is static too
 
 //        notStatic obj2 = new notStatic("Shresth");
-        /// cannot be assessed because it's not a static class so it shows an error of "cannot be reference from a static context" as the main classes is static
+        /// cannot be assessed because it's not a static class so it shows an error of "cannot be reference from a static context" as the Main classes is static
 
         nonStaticFirst obj3 = new nonStaticFirst("Utakarsh");
         /// here it can be accessed because it is a non-static class and it is also not reference by any non-static class

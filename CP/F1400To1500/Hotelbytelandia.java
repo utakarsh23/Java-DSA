@@ -4,7 +4,7 @@ import java.util.Arrays;
 import java.util.Scanner;
 
 public class Hotelbytelandia {
-//    public static void main (String[] args) throws Exception
+//    public static void Main (String[] args) throws Exception
 //    {
 //        Scanner in = new Scanner(System.in);
 //        int t = in.nextInt();
@@ -49,7 +49,7 @@ public class Hotelbytelandia {
 //        }
 //    }
 
-//    public static void main(String[] args) {
+//    public static void Main(String[] args) {
 //        Scanner in = new Scanner(System.in);
 //        int t = in.nextInt();
 //        while (t-- > 0) {
